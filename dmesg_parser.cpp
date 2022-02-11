@@ -23,7 +23,7 @@ namespace dmesg_parser {
 
 const std::string kTimestampRe = "^\\[[^\\]]+\\]\\s";
 
-DmesgParser::DmesgParser() {
+DmesgParser::DmesgParser() : report_ready_(false) {
     std::string bug_types;
     for (auto t : {"KFENCE", "KASAN"}) {
         if (bug_types.empty()) {
