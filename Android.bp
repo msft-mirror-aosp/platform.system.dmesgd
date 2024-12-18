@@ -28,8 +28,9 @@ cc_defaults {
         "-Wno-unused-argument",
         "-Wno-unused-function",
         "-Wno-nullability-completeness",
-        "-Os",
     ],
+
+    optimize_for_size: true,
 }
 
 cc_binary {
